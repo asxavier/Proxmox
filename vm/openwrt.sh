@@ -190,12 +190,12 @@ function default_settings() {
   HN=openwrt
   CORE_COUNT="1"
   RAM_SIZE="256"
-  BRG="vmbr0"
+  BRG="wan"
   VLAN=""
   MAC=$GEN_MAC
   LAN_MAC=$GEN_MAC_LAN
-  LAN_BRG="vmbr0"
-  LAN_IP_ADDR="192.168.1.1"
+  LAN_BRG="br-lan"
+  LAN_IP_ADDR="192.168.3.1"
   LAN_NETMASK="255.255.255.0"
   LAN_VLAN=",tag=999"
   MTU=""
