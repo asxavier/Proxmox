@@ -266,7 +266,7 @@ function advanced_settings() {
 
   if BRG=$(whiptail --backtitle "Proxmox VE Helper Scripts" --inputbox "Set a WAN Bridge" 8 58 vmbr0 --title "WAN BRIDGE" --cancel-button Exit-Script 3>&1 1>&2 2>&3); then
     if [ -z $BRG ]; then
-      BRG="vmbr0"
+      BRG="wan"
     fi
     echo -e "${DGN}Using WAN Bridge: ${BGN}$BRG${CL}"
   else
@@ -275,7 +275,7 @@ function advanced_settings() {
 
   if LAN_BRG=$(whiptail --backtitle "Proxmox VE Helper Scripts" --inputbox "Set a LAN Bridge" 8 58 vmbr0 --title "LAN BRIDGE" --cancel-button Exit-Script 3>&1 1>&2 2>&3); then
     if [ -z $LAN_BRG ]; then
-      LAN_BRG="vmbr0"
+      LAN_BRG="br-lan"
     fi
     echo -e "${DGN}Using LAN Bridge: ${BGN}$LAN_BRG${CL}"
   else
@@ -284,7 +284,7 @@ function advanced_settings() {
 
   if LAN_IP_ADDR=$(whiptail --backtitle "Proxmox VE Helper Scripts" --inputbox "Set a router IP" 8 58 $LAN_IP_ADDR --title "LAN IP ADDRESS" --cancel-button Exit-Script 3>&1 1>&2 2>&3); then
     if [ -z $LAN_IP_ADDR ]; then
-      LAN_IP_ADDR="192.168.1.1"
+      LAN_IP_ADDR="192.168.3.1"
     fi
     echo -e "${DGN}Using LAN IP ADDRESS: ${BGN}$LAN_IP_ADDR${CL}"
   else
